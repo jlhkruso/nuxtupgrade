@@ -1,0 +1,9 @@
+<template>
+  <v-main>
+    <v-row>
+      <v-col>
+        <h1>frontpage</h1>
+      </v-col>
+    </v-row>
+  </v-main>
+</template>
