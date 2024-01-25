@@ -5,7 +5,7 @@ const { resolve } = createResolver(import.meta.url);
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: [
-    "~/styles/main.scss",
+    "~/assets/styles/main.scss",
     "vuetify/lib/styles/main.sass",
     "@mdi/font/css/materialdesignicons.min.css",
   ],
@@ -16,22 +16,27 @@ export default defineNuxtConfig({
     transpile: ["vuetify"],
   },
   modules: [
+    "@pinia/nuxt",
+    "nuxt-icons",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
-        // @ts-expect-error
         config.plugins.push(
           vuetify({
             autoImport: true,
             styles: {
-              configFile: resolve("/styles/overwrites/vuetify-settings.scss"),
+              configFile: resolve(
+                "assets/styles/overwrites/vuetify-settings.scss"
+              ),
             },
           })
         );
       });
     },
-    //...
   ],
   vite: {
+    define: {
+      "process.env.DEBUG": false,
+    },
     vue: {
       template: {
         transformAssetUrls,
@@ -40,10 +45,15 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: "@use '@/styles/config/variables.scss' as *;",
+          sourceMap: true,
+          additionalData: "@use '@/assets/styles/config/variables.scss' as *;",
         },
       },
     },
   },
   ssr: false,
+  // handle nested composables
+  imports: {
+    dirs: ["composables", "composables/**"],
+  },
 });

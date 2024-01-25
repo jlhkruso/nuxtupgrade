@@ -7,14 +7,14 @@
       >
         <div class="full-height">
           <div class="flex-align-bottom">
-            <!-- <LazyNavigationNavLinks
+            <LazyNavigationNavLinks
               v-if="navigation"
               :links="navigation.topMenu"
             />
             <LazyNavigationNavLinks
               v-if="navigation"
               :links="navigation.bottomMenu"
-            /> -->
+            />
           </div>
         </div>
       </nav>
@@ -23,15 +23,37 @@
 </template>
 
 <script lang="ts">
-import { mainNavigation } from "~/utils/navigation";
+import { useLayouteStore } from "~/stores/layout";
+import { mainNavigation } from "@/utils/navigation";
 export default {
   data: () => ({
-    navigation: {},
+    navigation: {} as Navigation.INavigation,
     navIsActive: false,
   }),
   mounted() {
     this.navigation = mainNavigation(true);
   },
+  computed: {
+    // get user
+    getUser() {
+      // return this.$store.state.user?.isDigitalCustomer;
+      return true;
+    },
+    // get culture from state
+    getNavState() {
+      const layoutStore = useLayouteStore();
+      this.navIsActive = layoutStore.navIsOpen;
+      return layoutStore.navIsOpen;
+    },
+  },
+  watch: {
+    getNavState(navState: boolean) {
+      this.navIsActive = navState;
+    },
+  },
+  // mounted() {
+  //   this.navigation = mainNavigation(this.getUser);
+  // },
 };
 
 // export default Vue.extend({
@@ -66,7 +88,6 @@ export default {
 //     this.navigation = mainNavigation(this.getUser);
 //   },
 // });
-//
 </script>
 
 <style lang="scss" src="./navigation.scss"></style>

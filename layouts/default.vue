@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <v-app>
-      <Navigation />
-      <slot />
-    </v-app>
-  </div>
+  <v-app>
+    <Navigation />
+    <slot />
+  </v-app>
 </template>

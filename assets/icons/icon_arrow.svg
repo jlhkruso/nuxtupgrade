@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11.733px"
+	 height="11.473px" viewBox="0 0.13 11.733 11.473" enable-background="new 0 0.13 11.733 11.473" xml:space="preserve">
+
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Styleguide_Elements" transform="translate(-662.000000, -402.000000)" sketch:type="MSArtboardGroup">
+		<g id="Buttons" transform="translate(100.000000, 359.000000)" sketch:type="MSLayerGroup">
+			<g id="Button_Arrow_Small_Off" transform="translate(524.000000, 2.000000)" sketch:type="MSShapeGroup">
+				<g id="Fill-1-_x2B_-Fill-2" transform="translate(41.000000, 43.000000)">
+					<path id="Fill-1"  d="M8.733,4.224c0,0.169-0.065,0.339-0.195,0.468c-0.26,0.258-0.682,0.258-0.943,0L2.866,0
+						l-4.728,4.691c-0.26,0.258-0.682,0.258-0.943,0c-0.26-0.258-0.26-0.677,0-0.935L2.866-1.87l5.671,5.627
+						C8.668,3.886,8.733,4.055,8.733,4.224"/>
+					<path id="Fill-2" d="M3.533,0.384v8.872c0,0.191-0.298,0.347-0.667,0.347c-0.368,0-0.667-0.155-0.667-0.347
+						V0.384c0-0.191,0.298-1.652,0.667-1.652S3.533,0.193,3.533,0.384"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -9,14 +9,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({
+export default {
   props: {
     links: {
       type: Array as () => Navigation.INavLinkProps[],
       default: null,
     },
   },
-});
+};
 </script>

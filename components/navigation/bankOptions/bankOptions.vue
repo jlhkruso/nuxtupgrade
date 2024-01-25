@@ -15,7 +15,7 @@
           <v-list-item-icon class="ma-0 align-self-center nav-link__icon">
             <div
               v-if="link.icon"
-              v-html="require(`~/assets/svg/${link.icon}.svg?raw`)"
+              v-html="require(`~/assets/icons/${link.icon}.svg?raw`)"
             />
           </v-list-item-icon>
           <v-list-item-title class="nav-link__title">

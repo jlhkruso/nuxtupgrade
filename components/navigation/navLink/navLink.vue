@@ -1,14 +1,18 @@
 <template>
   <div>
-    <NavigationBankOptions :link="link" v-if="link.type === 'WebBank'" />
+    <template v-if="link.type === 'WebBank'">
+      <div></div>
+      <!-- <NavigationBankOptions :link="link" /> -->
+    </template>
+
     <template v-else-if="link.type === 'SignOut'">
-      <NavigationSignout :link="link" v-if="!isAdvisor" />
+      <div></div>
+      <!-- <NavigationSignout :link="link" v-if="!isAdvisor" /> -->
     </template>
     <v-list-item
       v-else
-      link
-      :href="link.linkType === 'external' ? link.linkUrl : null"
-      :to="link.linkType === 'internal' ? link.linkUrl : null"
+      :href="link.linkType === 'external' ? link.linkUrl : undefined"
+      :to="link.linkType === 'internal' ? link.linkUrl : undefined"
       class="pl-0 pr-0 pt-0 pb-0 nav-link"
       :class="{
         'v-list-item--active':
@@ -17,35 +21,36 @@
       :id="link.id"
     >
       <v-hover v-slot="{ hover }">
-        <v-list-item-content
+        <div
           class="d-flex flex-column align-items-center nav-link__content"
           :class="[
-            hover && `nav-link__content--hover`,
-            active && `nav-link__content--active`,
+            hover && 'nav-link__content--hover',
+            active && 'nav-link__content--active',
           ]"
         >
-          <v-list-item-icon class="ma-0 align-self-center nav-link__icon">
-            <div
+          <v-list-img class="ma-0 align-self-center nav-link__icon">
+            <nuxt-icon v-if="link.icon" :name="link.icon" filled />
+            <!-- <div
               v-if="link.icon"
-              v-html="require(`~/assets/svg/${link.icon}.svg?raw`)"
-            />
+              v-html="require(`@/assets/svg/${link.icon}.svg?raw`)"
+            /> -->
 
-            <LazyNavigationNotificationIndicator
+            <!-- <LazyNavigationNotificationIndicator
               v-if="link.type === 'MessageIndicatorMenuItem'"
-            />
-          </v-list-item-icon>
+            /> -->
+          </v-list-img>
           <v-list-item-title class="nav-link__title">
-            <DictionaryItem :translationKey="link.dictionaryKey" />
+            <!-- <DictionaryItem :translationKey="link.dictionaryKey" /> -->
           </v-list-item-title>
-        </v-list-item-content>
+        </div>
       </v-hover>
     </v-list-item>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
+import { useRoute } from "vue-router";
+export default {
   props: {
     link: {
       type: Object as () => Navigation.INavLinkProps,
@@ -68,10 +73,12 @@ export default Vue.extend({
       return isActive;
     },
     isDigitalUser(): boolean {
-      return this.$store.state.user?.isDigitalUser;
+      // return this.$store.state.user?.isDigitalUser;
+      return true;
     },
     isAdvisor(): boolean {
-      return this.$store.state.user?.isAdvisor;
+      // return this.$store.state.user?.isAdvisor;
+      return true;
     },
   },
   mounted() {
@@ -92,7 +99,7 @@ export default Vue.extend({
   },
   methods: {
     validCondition(): boolean {
-      const route = this.$nuxt.$route;
+      const route = useRoute();
       return !this.isDigitalUser && route.name === "information-slug"
         ? true
         : false;
@@ -106,6 +113,6 @@ export default Vue.extend({
       }
     },
   },
-});
+};
 </script>
 <style src="./navLink.scss" lang="scss"></style>

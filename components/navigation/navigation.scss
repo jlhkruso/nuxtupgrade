@@ -1,13 +1,13 @@
 .navigation {
   position: fixed;
   height: 100vh;
-  width: $navWidth;
+  width: 85px;
   overflow: hidden;
   z-index: 15;
   right: 0;
   left: auto;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  transform: translate($navWidth, 0);
+  transform: translate(85px, 0);
 
   &.is-active {
     transform: translate(0, 0);
@@ -36,7 +36,7 @@
     z-index: 1;
   }
   // overwrite vuetify
-  .theme--light .v-skeleton-loader .v-skeleton-loader__list-item {
+  .v-theme--light .v-skeleton-loader .v-skeleton-loader__list-item {
     background: $colorGreen;
   }
 }

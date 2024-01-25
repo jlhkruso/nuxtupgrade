@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+  <svg
+    id="Layer_1"
+    version="1.1"
+    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    width="11.473px"
+    height="11.733px"
+    viewBox="3.858 2.077 11.473 11.733"
+    enable-background="new 3.858 2.077 11.473 11.733"
+    xml:space="preserve"
+  >
+    <g id="Page-1">
+      <g
+        id="Styleguide_Elements"
+        transform="translate(-662.000000, -402.000000)"
+        sketch:type="MSArtboardGroup"
+      >
+        <g
+          id="Buttons"
+          transform="translate(100.000000, 359.000000)"
+          sketch:type="MSLayerGroup"
+        >
+          <g
+            id="Button_Arrow_Small_Off"
+            transform="translate(524.000000, 2.000000)"
+            sketch:type="MSShapeGroup"
+          >
+            <g
+              id="Fill-1-_x2B_-Fill-2"
+              transform="translate(41.000000, 43.000000)"
+            >
+              <path
+                id="Fill-1"
+                  fill="#435050"
+                d="M6.952,0.077c0.169,0,0.339,0.065,0.468,0.195c0.258,0.26,0.258,0.682,0,0.943L2.728,5.944
+						l4.691,4.728c0.258,0.26,0.258,0.682,0,0.943c-0.258,0.26-0.677,0.26-0.935,0L0.858,5.944l5.627-5.671
+						C6.614,0.142,6.783,0.077,6.952,0.077"
+              />
+              <path
+                id="Fill-2"
+                  fill="#435050"
+                d="M3.112,5.277h8.872c0.191,0,0.347,0.298,0.347,0.667c0,0.368-0.155,0.667-0.347,0.667
+						H3.112c-0.191,0-1.652-0.298-1.652-0.667C1.46,5.575,2.921,5.277,3.112,5.277"
+              />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>

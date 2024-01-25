@@ -15,7 +15,8 @@ body {
     outline: none;
   }
   // remove borders
-  .theme--light.v-expansion-panels .v-expansion-panel:not(:first-child)::after,
+  .v-theme--light.v-expansion-panels
+    .v-expansion-panel:not(:first-child)::after,
   .v-expansion-panel::before {
     content: none;
   }

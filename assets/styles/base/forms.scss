@@ -78,7 +78,8 @@
       opacity: 0;
       display: block;
       transition: opacity $custom-transition;
-      background: url("~/assets/svg/icon_checkmark.svg") center center no-repeat;
+      background: url("~/assets/icons/icon_checkmark.svg") center center
+        no-repeat;
       background-repeat: no-repeat;
       background-position: center center;
     }

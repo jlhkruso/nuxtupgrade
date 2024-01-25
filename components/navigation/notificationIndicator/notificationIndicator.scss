@@ -1,15 +1,15 @@
 .notification-indicator {
   width: auto;
   position: absolute;
-  right: rem(-7px);
-  top: rem(-9px);
+  right: remSize(-7px);
+  top: remSize(-9px);
   background: $colorLightGreen;
   border-radius: 50%;
-  width: rem(19px);
-  height: rem(19px);
+  width: remSize(19px);
+  height: remSize(19px);
   text-align: right;
-  border: rem(2px) solid $colorGreen;
-  font-size: rem(10px);
-  line-height: rem(9px);
-  padding: rem(3px);
+  border: remSize(2px) solid $colorGreen;
+  font-size: remSize(10px);
+  line-height: remSize(9px);
+  padding: remSize(3px);
 }
