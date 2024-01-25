@@ -1,0 +1,36 @@
+.article-page {
+  margin-top: remSize(25px);
+  margin-bottom: remSize(80px);
+  max-width: 100%;
+  overflow: hidden;
+  padding-left: remSize(25px);
+  padding-right: remSize(25px);
+
+  // category list header
+  &__list-header {
+    margin-top: remSize(15px);
+    margin-bottom: remSize(20px);
+  }
+  // list items
+  &__list-item {
+    padding-bottom: remSize(5px);
+  }
+  &__list-item a {
+    display: block;
+    &:hover h6 {
+      color: $colorTextLight;
+    }
+  }
+  // category list button
+  &__list-btn {
+    margin-top: remSize(15px);
+    width: 100%;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  &__image img {
+    height: 65vw;
+    max-height: remSize(450px);
+  }
+}

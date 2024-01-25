@@ -1,0 +1,52 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// scale
+.scale-enter-active,
+.scale-leave-active {
+  transition: 0.4s;
+}
+.scale-enter,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+
+// page transitions
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.4s $custom-transition--cubic;
+}
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+}
+
+// slide y
+.slide-y-enter-active,
+.slide-y-leave-active {
+  transition: transform 300ms ease-in, opacity 300ms ease-in;
+}
+.slide-y-enter,
+.slide-y-leave-to {
+  transform: translateY(-2rem);
+  opacity: 0;
+}
+
+// slide and move
+.slide-y-top-enter-active,
+.slide-y-top-leave-active {
+  transition: transform 1.2s cubic-bezier(0.45, 0, 0, 1),
+    opacity 1.2s cubic-bezier(0.45, 0, 0, 1);
+}
+.slide-y-top-enter,
+.slide-y-top-leave-to {
+  transform: translateY(4rem);
+  opacity: 0;
+}

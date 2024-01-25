@@ -3,10 +3,13 @@
 
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
-
-export default defineNuxtPlugin((app) => {
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     // ... your configuration
+    components,
+    directives,
   });
-  app.vueApp.use(vuetify);
+  nuxtApp.vueApp.use(vuetify);
 });

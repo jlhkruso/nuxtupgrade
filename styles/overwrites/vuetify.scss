@@ -1,0 +1,22 @@
+body {
+  .v-application ul,
+  .v-application ol {
+    padding-left: 0;
+  }
+  // only for form validation
+  .v-application .formulate-form ul {
+    list-style-type: none;
+  }
+  .v-input input:focus,
+  .v-input input:active,
+  .v-input textarea:focus,
+  .v-input textarea:active {
+    border: none;
+    outline: none;
+  }
+  // remove borders
+  .theme--light.v-expansion-panels .v-expansion-panel:not(:first-child)::after,
+  .v-expansion-panel::before {
+    content: none;
+  }
+}

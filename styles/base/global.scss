@@ -1,0 +1,86 @@
+html {
+  overflow-x: auto;
+  font-size: 16px;
+  font-family: $body-font-family, sans-serif;
+
+  @media (max-width: 750px) {
+    font-size: 15px;
+  }
+}
+body {
+  font-weight: $fontWeightNormal;
+
+  .container {
+    max-width: 1100px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// global loader
+.spinner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// "tabs"
+.tab-section {
+  width: 100%;
+  &__item {
+    cursor: pointer;
+    padding: remSize(14px) 0;
+    text-align: center;
+    width: 33.33%;
+    border-bottom: 1px solid var(--v-primary-base);
+  }
+  &__item-text {
+    display: block;
+    font-size: remSize(14px);
+    text-transform: uppercase;
+    color: $colorTextLight;
+    font-weight: $fontWeightNormal;
+  }
+  // hover
+  &__item:hover {
+    .tab-section__item-text {
+      color: var(--v-primary-base);
+      font-weight: $fontWeightMedium;
+    }
+  }
+  // active
+  &__item.is-active {
+    border: 1px solid var(--v-primary-base);
+    border-bottom: none;
+    .tab-section__item-text {
+      color: var(--v-primary-base);
+      font-weight: $fontWeightMedium;
+    }
+  }
+}
+
+// vuetify buttons
+.v-btn {
+  box-shadow: none;
+}
+
+@include breakpoint-max(small) {
+  // "tabs"
+  .tab-section {
+    &__item {
+      padding: remSize(10px) 0;
+      width: 33.33%;
+    }
+    &__item-text {
+      font-size: remSize(12px);
+    }
+  }
+}

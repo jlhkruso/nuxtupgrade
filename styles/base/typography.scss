@@ -1,0 +1,238 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $fontEmona;
+  font-weight: normal;
+  color: $colorGreen;
+  margin-bottom: remSize(10px);
+  word-break: normal;
+}
+h1,
+.h1 {
+  font-size: remSize(40px);
+  line-height: remSize(42px);
+  letter-spacing: remSize(1px);
+  margin-top: remSize(50px);
+  margin-bottom: remSize(30px);
+  text-align: center;
+  @media (max-width: 750px) {
+    font-size: remSize(35px);
+    line-height: remSize(38px);
+    margin-top: remSize(30px);
+    margin-bottom: remSize(20px);
+  }
+  &.has-help-context {
+    margin-top: remSize(10px);
+  }
+}
+h2,
+.h2 {
+  font-size: remSize(27px);
+  line-height: remSize(32px);
+  letter-spacing: remSize(0.68px);
+  text-align: center;
+}
+h3,
+.h3 {
+  font-family: $body-font-family, sans-serif;
+  font-size: remSize(16px);
+  font-weight: $fontWeightNormal;
+  line-height: remSize(20px);
+}
+h6,
+.h6 {
+  font-size: remSize(14px);
+  line-height: remSize(18px);
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+a.no-text-underline {
+  &:hover {
+    text-decoration: none;
+  }
+}
+p {
+  color: $colorTextLight;
+  font-size: remSize(14px);
+  line-height: remSize(16px);
+}
+body {
+  b,
+  strong {
+    font-weight: $fontWeightBold;
+  }
+}
+
+body .v-application .rte {
+  ul,
+  ol {
+    margin-top: remSize(16px);
+    margin-bottom: remSize(16px);
+    padding-left: remSize(25px);
+    li {
+      color: $colorTextLight;
+      font-size: remSize(14px);
+      line-height: remSize(16px);
+    }
+  }
+  table {
+    width: 100%;
+    margin: remSize(20px) 0;
+    border: 1px solid $colorTextLight;
+
+    thead {
+      outline: 1px solid $colorTextLight;
+    }
+    th,
+    td {
+      color: $colorTextLight;
+      font-size: remSize(14px);
+      line-height: remSize(16px);
+      text-align: left;
+      padding: remSize(5px);
+    }
+  }
+  p a {
+    color: inherit;
+  }
+}
+$ol-element-size: remSize(35px);
+ol.step-guide {
+  width: 60%;
+  margin: 0 auto;
+  li {
+    color: var(--v-primary-base);
+    font-weight: $fontWeightMedium;
+    font-size: remSize(16px);
+    line-height: 1.2;
+    margin-bottom: remSize(30px);
+    padding-left: remSize(25px);
+    position: relative;
+    &::marker {
+      font-size: remSize(14px);
+      font-weight: $fontWeightNormal;
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: $ol-element-size;
+      width: $ol-element-size;
+      left: remSize(-29px);
+      top: remSize(-6px);
+      border: 1px solid var(--v-primary-base);
+      border-radius: 50%;
+    }
+  }
+}
+.media-caption,
+.media-note {
+  color: $colorTextLight;
+  font-size: remSize(16px);
+  p {
+    color: $colorTextLight;
+    font-size: remSize(12px);
+  }
+}
+.media-caption {
+  margin-top: remSize(10px);
+}
+.list-headline {
+  font-size: remSize(14px);
+  line-height: remSize(20px);
+  font-weight: $fontWeightMedium;
+  color: $colorGreen;
+  text-transform: uppercase;
+}
+.text-title-4 {
+  font-family: $fontGotham !important;
+  font-weight: $fontWeightBold;
+  font-size: 16px;
+}
+
+.text-tooltip {
+  font-size: 14px;
+  font-weight: $fontWeightNormal;
+  line-height: 16px;
+}
+
+.text-caption {
+  font-size: 14px !important;
+  font-weight: $fontWeightNormal !important;
+  line-height: 16px !important;
+}
+
+.text-list-title {
+  font-size: 16px;
+  font-weight: $fontWeightMedium;
+  line-height: 20px;
+  color: $colorGreen;
+}
+.focus {
+  display: inline-block;
+  font-size: remSize(12px);
+  font-weight: $fontWeightMedium;
+  color: var(--v-primary-base);
+}
+.focus-dictionary-item {
+  display: inline-block;
+  span {
+    display: inline-block;
+    font-size: remSize(12px);
+    font-weight: $fontWeightMedium;
+    color: var(--v-primary-base);
+  }
+}
+.text-ingress {
+  font-weight: $fontWeightNormal;
+  font-size: remSize(16px);
+  color: $colorTextLight;
+}
+.text-bold {
+  font-weight: $fontWeightBold;
+}
+.text-semi-bold {
+  font-weight: $fontWeightMedium;
+}
+.text-body {
+  &--bold {
+    font-weight: $fontWeightBold;
+  }
+}
+.flow-desc {
+  color: $colorTextLight;
+  font-size: remSize(28px);
+  line-height: remSize(30px);
+  margin-bottom: remSize(20px);
+  font-weight: $fontWeightLight;
+}
+.flow-action-link {
+  .link-with-arrow span {
+    color: var(--v-primary-base);
+    font-size: remSize(14px);
+    font-weight: $fontWeightMedium;
+  }
+}
+.text-alert {
+  color: red !important;
+}
+
+span.text-green {
+  color: $colorLightGreen;
+}
+span.text-red {
+  color: $colorRed;
+}

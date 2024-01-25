@@ -1,0 +1,216 @@
+.forms {
+  input,
+  textarea,
+  form {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+  }
+  label {
+    display: block;
+    color: var(--v-primary-base);
+    font-size: remSize(16px);
+    font-weight: $fontWeightMedium;
+    line-height: remSize(22px);
+    margin-bottom: remSize(2px);
+  }
+  // overwrite reset style from vuetify
+  .theme--light.v-label {
+    color: var(--v-primary-base);
+  }
+
+  // input
+  input[type="date"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="text"] {
+    border: 1px solid $colorGreen60;
+    height: remSize(42px);
+  }
+
+  textarea {
+    height: remSize(264px);
+  }
+
+  //// validation
+  [data-is-showing-errors="true"] {
+    input,
+    textarea {
+      border: 1px solid var(--v-error-base);
+
+      &::placeholder {
+        color: var(--v-error-base);
+      }
+    }
+
+    .formulate-input-errors {
+      max-width: remSize(600px);
+      margin-bottom: remSize(4px);
+      li {
+        font-size: remSize(13px);
+        line-height: remSize(18px);
+        font-style: italic;
+        color: var(--v-error-base);
+      }
+    }
+  }
+
+  // vue formulate style overwrite
+  // checkbox
+  &__checkboxes {
+    input ~ label {
+      height: remSize(28px);
+      width: remSize(28px);
+      border: 1px solid $colorGreen60;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+    }
+    input ~ label:before {
+      content: "";
+      height: remSize(20px);
+      width: remSize(20px);
+      margin-left: 4px;
+      margin-top: 2px;
+      opacity: 0;
+      display: block;
+      transition: opacity $custom-transition;
+      background: url("~/assets/svg/icon_checkmark.svg") center center no-repeat;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    input:checked ~ label {
+      border: 1px solid $colorGreen60;
+      &:before {
+        opacity: 1;
+      }
+    }
+    input:checked:hover ~ label {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+    input[disabled="disabled"] ~ label {
+      cursor: initial;
+      &:before {
+        opacity: 0.5;
+      }
+    }
+  }
+  // radio buttons
+  &__radio {
+    margin-top: remSize(15px);
+    .formulate-input-group-item {
+      margin-bottom: remSize(18px);
+    }
+    .formulate-input-wrapper,
+    .formulate-input-element--radio {
+      display: flex;
+      align-items: center;
+    }
+    label {
+      display: inline-block;
+      cursor: pointer;
+    }
+    label.formulate-input-label {
+      padding-left: remSize(8px);
+      font-weight: $fontWeightNormal;
+      font-size: remSize(16px);
+      line-height: remSize(22px);
+    }
+    input ~ label {
+      height: remSize(28px);
+      width: remSize(28px);
+      border-radius: 50%;
+      border: 1px solid $colorGreen60;
+      cursor: pointer;
+    }
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+    input ~ label:before {
+      content: "";
+      height: remSize(20px);
+      width: remSize(20px);
+      margin-left: remSize(3px);
+      margin-top: remSize(3px);
+      border-radius: 50%;
+      opacity: 0;
+      display: block;
+      background-color: var(--v-primary-base);
+      transition: opacity $custom-transition;
+    }
+
+    input:checked ~ label {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  // submit button
+
+  .submit-button button {
+    background-color: var(--v-primary-base);
+    border: 1px solid var(--v-primary-base);
+    transition: background-color $custom-transition, color $custom-transition;
+    min-width: remSize(220px);
+    min-height: remSize(50px);
+    height: remSize(44px);
+    color: $colorWhite;
+    text-transform: uppercase;
+    // hover
+    &:hover {
+      // overwrite "!important" from vuetify style
+      background-color: transparent;
+      color: var(--v-primary-base);
+    }
+  }
+  // disabled button
+  button[disabled="disabled"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  // hover/active
+  input,
+  textarea {
+    transition: border $custom-transition;
+    border: 1px solid $colorGreen60;
+    padding: remSize(10px);
+    font-size: remSize(17px);
+    line-height: remSize(22px);
+    font-weight: $fontWeightLight;
+    color: var(--v-primary-base);
+    margin-bottom: remSize(15px);
+    &:hover {
+      border: 1px solid var(--v-primary-base);
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid var(--v-primary-base);
+    }
+  }
+  .custom-label {
+    padding-left: remSize(8px);
+    font-weight: $fontWeightNormal;
+    font-size: remSize(16px);
+    line-height: remSize(22px);
+  }
+}
+
+// overwrite reset style from vuetify
+body {
+  input,
+  textarea {
+    outline: none;
+  }
+  textarea {
+    resize: none;
+  }
+}
