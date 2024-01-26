@@ -1,6 +1,6 @@
 <template>
   <div class="navigation" :class="{ 'is-active': navIsActive }">
-    <v-navigation-drawer permanent color="#435050" height="100%">
+    <v-navigation-drawer color="#435050" height="100%" mobile-breakpoint="xs">
       <nav
         class="d-flex flex-column justify-space-between overflow-hidden navigation__list"
         role="navigation"

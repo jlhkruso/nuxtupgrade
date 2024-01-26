@@ -9,6 +9,23 @@ export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     // ... your configuration
     ssr: false,
+    theme: {
+      defaultTheme: "light",
+      themes: {
+        light: {
+          dark: false,
+          colors: {
+            primary: "#435050",
+            primary40: "#dfe7e2",
+            accent: "#dbdbdb",
+            secondary: "#75bfa1",
+            warning: "#e0c301",
+            error: "#cc4d4c",
+            success: "#7dac47",
+          },
+        },
+      },
+    },
     components,
     directives,
   });

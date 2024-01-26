@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     "vuetify/lib/styles/main.sass",
     "@mdi/font/css/materialdesignicons.min.css",
   ],
+
+  app: {
+    baseURL: "/majworld/",
+  },
   devtools: { enabled: true },
 
   // vuetify module configuration
